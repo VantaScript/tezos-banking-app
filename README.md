@@ -1,43 +1,64 @@
-# Svelte + Vite
+# Tezos Bank dApp
 
-This template should help get you started developing with Svelte in Vite.
+A modern decentralized banking application built on the Tezos blockchain. Deposit and withdraw Tez (XTZ) through an intuitive web interface.
 
-## Recommended IDE Setup
+## Features
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+- 🔐 **Wallet Integration** - Connect your Tezos wallet using Beacon Wallet
+- 💰 **Deposit** - Deposit Tez to the smart contract (1-100 XTZ)
+- 💸 **Withdraw** - Withdraw your deposited Tez
+- 📊 **Balance Display** - View your wallet balance in real-time
+- 🎨 **Modern UI** - Beautiful, responsive interface with smooth animations
 
-## Need an official Svelte framework?
+## Tech Stack
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+- **Frontend**: Svelte 5 + Vite
+- **Blockchain**: Tezos (Shadownet testnet)
+- **Wallet**: Beacon Wallet (@taquito/beacon-wallet)
+- **SDK**: Taquito (@taquito/taquito)
 
-## Technical considerations
+## Getting Started
 
-**Why use this over SvelteKit?**
+### Prerequisites
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+- Node.js (v16 or higher)
+- npm or yarn
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+### Installation
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+```bash
+npm install
 ```
+
+### Development
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:4000`
+
+### Build
+
+```bash
+npm run build
+```
+
+## Usage
+
+1. **Connect Wallet**: Click "Connect Wallet" and approve the connection in your wallet
+2. **Get Testnet Tez**: Visit the [Shadownet Faucet](https://faucet.shadownet.teztnets.com/) to get testnet tokens
+3. **Deposit**: Enter an amount (1-100 XTZ) and click "Deposit"
+4. **Withdraw**: Click "Withdraw" to retrieve your deposited Tez
+
+## Network
+
+- **Network**: Shadownet Testnet
+- **RPC URL**: `https://rpc.shadownet.teztnets.com`
+- **Contract**: `KT1HtZfNKVcgPYCTuVPKm3cjEVAC4CKYrfjX`
+- **Explorer**: [Shadownet TzKT](https://shadownet.tzkt.io/)
+
+## License
+
+MIT
+
